@@ -34,11 +34,11 @@
  */	
  
  /*
- *  Game Rule: 
- *  The ship length is between 1-4;
+ *  	Game Rules: 
+ *  	The ship length is between 1-4;
  *	The ship doesn't go out of gaming board and ship would not extend beyond the end of board
  *	Player needs to hit whold ship to sink it, and they have 5 chances
- *  Player can try until they used up all 5 torpedos.
+ *  	Player can try until they used up all 5 torpedos.
  *	
  *	
  *
@@ -53,10 +53,10 @@ int computeResult(int userNum, int start_position, int end_position, char ship[]
 
 int main(void) {
 	int compNum, userNum, res;
-    char ship[11] = "..........";//display the guess result
+    	char ship[11] = "..........";//display the guess result
 	res = 0;
 	
-    int count = 0;//The player tries to guess the location for 5 times
+    	int count = 0;//The player tries to guess the location for 5 times
 	//	  0) Display Title and Instructions
 	displayTitle();
 
@@ -68,14 +68,11 @@ int main(void) {
 	int end_position = start_position + ship_size - 1;//array start form 0, size start from 1
 	
 	while(res == 0 && count < 5) {
-
 		//	 *   2) ASk user to guess a number
 		userNum = getUserInput();
-        count++;
-
+        	count++;
 		//	 *   3) Compare user input to random number
 		res = computeResult(userNum, start_position,end_position,ship);
-
 		// start over if guess is wrong
 	}
 	if(res == 1)//Sink the ship successfully
@@ -90,11 +87,11 @@ int main(void) {
 	//Print the answer to the real ship location.
 	printf("Ship Location:\n");
 	char real_ship[11] = "..........";
-    for(int i = start_position; i<=end_position; i++)
-    {
-        real_ship[i] = '-';
-    }
-    printf("%s\n", real_ship);
+	for(int i = start_position; i<=end_position; i++)
+	{
+		real_ship[i] = '-';
+	}
+	printf("%s\n", real_ship);
 	return EXIT_SUCCESS;
 }
 
@@ -127,26 +124,27 @@ int getUserInput(void) {
 	return num;
 }
 
-int computeResult(int userNum, int start_position, int end_position, char ship[]) {
-	
-    if (userNum >= start_position && userNum <=end_position) 
+int computeResult(int userNum, int start_position, int end_position, char ship[]) 
+{
+	if (userNum >= start_position && userNum <=end_position) 
 	{
 		printf("Boom, A Hit!\n");
 		ship[userNum] = 'H';
 		printf("%s \n",ship);
 		for(int i = start_position; i<= end_position; i++)// check whether the user has shoot the whole ship
 		{
-			if(ship[i] != 'H')//Check current ship status
+			if(ship[i] != 'H')
 			{
 				return 0;
 			}
 		}
 		return 1;//The whole ship has been shoot by player, return 1
 	}
-	else {
+	else 
+	{
 		printf("Missed, try again.\n");
 		ship[userNum] = 'm';
 		printf("%s \n",ship);
 	}
-	return 0;//Missed return 0;
+	return 0;//Missed, return 0;
 }
