@@ -39,9 +39,6 @@
  *	The ship doesn't go out of gaming board and ship would not extend beyond the end of board
  *	Player needs to hit whold ship to sink it, and they have 5 chances
  *  	Player can try until they used up all 5 torpedos.
- *	
- *	
- *
  */
 
 // Function Prototypes
