@@ -7,4 +7,4 @@ The actually storage has one more character than the word "Hello."
 Therefore, The size of ship array is 11:
 ## char ship[11] = ".........."
 
-* Actually, if defining 10 will give result "..........@" *
+** Actually, if defining 10 will give result "..........@" 
