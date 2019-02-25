@@ -13,7 +13,7 @@ char greeting[6] = {'H', 'e', 'l', 'l', 'o', '\0'};
 ```
 char ship[11] = ".........." //10 dots
 ```
-* Actually, if defining 10 and print it out,  the result will be 10 dots with a wierd character at the end"..........@" 
+* Actually, if defining 10 and print it out,  the result will be 10 dots with a weird character at the end"..........@" 
 
 ## 2.in this code, function names:
 ### initBoard() --- generateRandomNum(void);
