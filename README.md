@@ -1,25 +1,26 @@
 # lab5
-## 1. ship size
-### Strings are actually one-dimensional array of characters terminated by a null character '\0'.
-### If you define:
+## Part One
+### 1. ship size
+#### Strings are actually one-dimensional array of characters terminated by a null character '\0'.
+#### If you define:
 ```
 char greeting[] = "Hello";
 ```
-### The actually storage has one more character than the word "Hello."
+#### The actually storage has one more character than the word "Hello."
 ```
 char greeting[6] = {'H', 'e', 'l', 'l', 'o', '\0'};
 ```
-### Therefore, The size of ship array is 11:
+#### Therefore, The size of ship array is 11:
 ```
 char ship[11] = ".........." //10 dots
 ```
 * Actually, if defining 10 and print it out,  the result will be 10 dots with a weird character at the end"..........@" 
 
-## 2.in this code, function names:
-### initBoard() --- generateRandomNum(void);
-### showGameBoard() + updateBoard() --- computeResult();
+### 2.in this code, function names:
+#### initBoard() --- generateRandomNum(void);
+#### showGameBoard() + updateBoard() --- computeResult();
 
-## 3. An example of passing array to function
+### 3. An example of passing array to function
 ```
 float average(float age[]);
 int main()
@@ -40,3 +41,8 @@ float average(float age[])
 	return avg;
 }
 ```
+## Part Two
+### This part is not realized in the code
+'''
+For example,inagame with only five maximum guesses,you can’t win if you miss the first two tries and the ship is four spaces long.
+'''
