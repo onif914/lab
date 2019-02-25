@@ -42,7 +42,7 @@ float average(float age[])
 }
 ```
 ## Part Two
-### This part is not realized in the code
+### This part is not realized in this code
 '''
 For example,inagame with only five maximum guesses,you can’t win if you miss the first two tries and the ship is four spaces long.
 '''
