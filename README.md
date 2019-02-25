@@ -15,7 +15,7 @@ char ship[11] = ".........."
 ```
 * Actually, if defining 10 and print it out,  the result will be "..........@" 
 
-## 2.in this code, function name:
+## 2.in this code, function names:
 ### initBoard() --- generateRandomNum(void);
 ### showGameBoard() + updateBoard() --- computeResult();
 
