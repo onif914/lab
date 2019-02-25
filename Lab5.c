@@ -57,7 +57,7 @@ int main(void) {
 
 		//	 *   2) ASk user to guess a number
 		userNum = getUserInput();
-        count++;
+       		count++;
 
 		//	 *   3) Compare user input to random number
 		res = computeResult(userNum, compNum,ships);
